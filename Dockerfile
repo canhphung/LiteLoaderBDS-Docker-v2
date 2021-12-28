@@ -24,9 +24,7 @@ RUN unzip LiteLoader-${LLVER}.zip -d ${BDSDIR}
 
     COPY vcruntime140_1.zip ${BDSDIR}
     RUN unzip vcruntime140_1.zip "vcruntime140_1.dll" && \
-    rm vcruntime140_1.zip && \
-    wine SymDB2.exe && \
-    rm /home/container/bds/.wine -r
+    rm vcruntime140_1.zip
     
 USER container
 ENV  USER=container HOME=/home/container
