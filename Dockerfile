@@ -14,7 +14,7 @@ ENV LLVER 2.0.3
 RUN apk update
 RUN adduser --disabled-password --home /home/container container
 RUN apk add wget && apk add unzip
-RUN wget http://dl-3.alpinelinux.org/alpine/edge/community/x86/wine-1.8.1-r0.apk && apt add ./wine-1.8.1-r0.apk
+RUN apt add wine
 RUN wget https://minecraft.azureedge.net/bin-win/bedrock-server-${BDSVER}.zip
 RUN wget https://github.com/LiteLDev/LiteLoaderBDS/releases/download/${LLVER}/LiteLoader-${LLVER}.zip
 RUN unzip bedrock-server-${BDSVER}.zip -d ${BDSDIR} && \
