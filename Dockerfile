@@ -19,8 +19,8 @@ RUN wget https://minecraft.azureedge.net/bin-win/bedrock-server-${BDSVER}.zip
 RUN wget https://github.com/LiteLDev/LiteLoaderBDS/releases/download/${LLVER}/LiteLoader-${LLVER}.zip
 RUN unzip bedrock-server-${BDSVER}.zip -d ${BDSDIR}
 RUN unzip LiteLoader-${LLVER}.zip -d ${BDSDIR}
-RUN rm /home/container/bds/bedrock-server-${BDSVER}.zip
-RUN rm /home/container/bds/LiteLoader-${LLVER}.zip
+RUN rm /home/container/bedrock-server-${BDSVER}.zip
+RUN rm /home/container/LiteLoader-${LLVER}.zip
 
     COPY vcruntime140_1.zip ${BDSDIR}
     RUN unzip vcruntime140_1.zip "vcruntime140_1.dll" && \
