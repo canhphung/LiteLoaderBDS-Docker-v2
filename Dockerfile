@@ -17,6 +17,7 @@ RUN apk add wget && apk add unzip
 RUN apk add wine
 RUN wget https://minecraft.azureedge.net/bin-win/bedrock-server-${BDSVER}.zip
 RUN wget https://github.com/LiteLDev/LiteLoaderBDS/releases/download/${LLVER}/LiteLoader-${LLVER}.zip
+RUN wget https://github.com/canhphung/LiteLoaderBDS-Docker-v2/raw/main/vcruntime140_1.zip
 RUN unzip bedrock-server-${BDSVER}.zip -d ${BDSDIR}
 RUN unzip LiteLoader-${LLVER}.zip -d ${BDSDIR}
 
